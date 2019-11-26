@@ -7,5 +7,10 @@ php:
 before_script:
   - travis_retry composer update
 
+test:
+  adapter: sqlite3
+  database: ":memory:"
+  timeout: 500
+
 script:
   - vendor/bin/phpnuit

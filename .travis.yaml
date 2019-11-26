@@ -9,4 +9,4 @@ before_script:
   - travis_retry composer update
 
 script:
-  - vendor/bin/phpnuit
+  - vendor/bin/phpunit

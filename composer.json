@@ -1,0 +1,40 @@
+{
+    "name": "mikehins/laravel-translatable",
+    "description": "A translatable behaviour for eloquent models",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Hins",
+            "email": "me@mikehins.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mikehins\\Translatable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mikehins\\Translatable\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mikehins\\Translatable\\TranslatableServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "migrate": [
+            "php artisan migrate --package=\"mikehins/laravel-translatable\" --env=$LARAVEL_ENV"
+        ]
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "8.5.x-dev"
+    }
+}

@@ -1,4 +1,5 @@
 language: php
+
 php:
   - 7.1
   - 7.2
@@ -6,11 +7,6 @@ php:
 
 before_script:
   - travis_retry composer update
-
-test:
-  adapter: sqlite3
-  database: ":memory:"
-  timeout: 500
 
 script:
   - vendor/bin/phpnuit

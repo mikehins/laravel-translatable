@@ -6,15 +6,19 @@ Laravel translatable uses the model events to create update or delete translatio
 MORE INSTRUCTIONS TO COME...
 
 Install
+
 ```composer require mikehins/laravel-translatable```
 
 Next, you need to publish the migration
+
 ```php artisan vendor:publish --provider="Mikehins\Translatable\TranslatableServiceProvider" --tag="migrations"```
 
 and the config file
+
 ```php artisan vendor:publish --provider="Mikehins\Translatable\TranslatableServiceProvider" --tag="config"```
 
 You will need to run the migration to create the translations table
+
 ```php artisan migrate```
 
 You need to edit the configuration file to tell your app which languages ​​you will use

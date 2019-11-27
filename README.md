@@ -1,9 +1,13 @@
-[![Build Status](https://travis-ci.org/mikehins/laravel-translatable.svg?branch=master)](https://travis-ci.org/mikehins/laravel-translatable) [![StyleCI shield](https://github.styleci.io/repos/223970038/shield)](https://github.styleci.io/repos/223970038) [![GitHub license](https://img.shields.io/github/license/mikehins/laravel-translatable.svg)](https://github.com/mikehins/laravel-translatable/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/mikehins/laravel-translatable.svg?branch=master)](https://travis-ci.org/mikehins/laravel-translatable)
+[![Total Downloads](https://poser.pugx.org/mikehins/laravel-translatable/downloads)](https://packagist.org/packages/mikehins/laravel-translatable)
+[![StyleCI shield](https://github.styleci.io/repos/223970038/shield)](https://github.styleci.io/repos/223970038)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mikehins/laravel-translatable.svg?style=flat-square)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable)
+[![GitHub license](https://img.shields.io/github/license/mikehins/laravel-translatable.svg)](https://github.com/mikehins/laravel-translatable/blob/master/LICENSE)
 
 # laravel-translatable
-Laravel translatable uses the model events to create update or delete translations associated with a model.
+DO NOT USE RIGHT NOW... MORE INSTRUCTIONS TO COME...
 
-MORE INSTRUCTIONS TO COME...
+Laravel translatable uses the model events to create update or delete translations associated with a model.
 
 Install
 

@@ -13,28 +13,6 @@ use Illuminate\Support\ServiceProvider;
 
 class TranslatableServiceProvider extends ServiceProvider
 {
-<<<<<<< Updated upstream
-    public function boot()
-    {
-        $this->loadMigrationsFrom(__DIR__.'/database/migrations/');
-
-        $this->publishes([
-            __DIR__.'/database/migrations/' => database_path('migrations'),
-        ], 'migrations');
-
-        $this->publishes([
-            __DIR__.'/config/languages.php' => config_path('languages.php'),
-        ]);
-
-        Collection::macro('for', function ($field, $code) {
-            return $this->where('key', $field)->where('locale', $code)->pluck('value')->first() ?? $field;
-        });
-    }
-
-    public function register()
-    {
-    }
-=======
 	public function boot()
 	{
 		$this->loadMigrationsFrom(__DIR__ . '/database/migrations/');
@@ -55,5 +33,4 @@ class TranslatableServiceProvider extends ServiceProvider
 	public function register()
 	{
 	}
->>>>>>> Stashed changes
 }

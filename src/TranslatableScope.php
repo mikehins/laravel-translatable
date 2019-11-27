@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Scope;
 
 class TranslatableScope implements Scope
 {
-	public function apply(Builder $builder, Model $model)
-	{
-		$builder->translated();
-	}
+    public function apply(Builder $builder, Model $model)
+    {
+        $builder->translated();
+    }
 }

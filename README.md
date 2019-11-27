@@ -1,15 +1,19 @@
+[![Latest Stable Version](https://poser.pugx.org/mikehins/laravel-translatable/v/stable?format=flat-square)](https://packagist.org/packages/mikehins/laravel-translatable)
 [![Build Status](https://travis-ci.org/mikehins/laravel-translatable.svg?branch=master)](https://travis-ci.org/mikehins/laravel-translatable)
 [![Total Downloads](https://poser.pugx.org/mikehins/laravel-translatable/downloads)](https://packagist.org/packages/mikehins/laravel-translatable)
 [![StyleCI shield](https://github.styleci.io/repos/223970038/shield)](https://github.styleci.io/repos/223970038)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mikehins/laravel-translatable.svg?style=flat-square)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable)
 [![GitHub license](https://img.shields.io/github/license/mikehins/laravel-translatable.svg)](https://github.com/mikehins/laravel-translatable/blob/master/LICENSE)
+[![Code Coverage](https://scrutinizer-ci.com/g/mikehins/laravel-translatable/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mikehins/laravel-translatable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/mikehins/laravel-translatable/badge.svg?branch=master&service=github)](https://coveralls.io/github/mikehins/laravel-translatable?branch=master)
 
 # laravel-translatable
 DO NOT USE RIGHT NOW... MORE INSTRUCTIONS TO COME...
 
 Laravel translatable uses the model events to create update or delete translations associated with a model.
 
-Install
+## Installation
 
 ```composer require mikehins/laravel-translatable```
 
@@ -35,6 +39,7 @@ return [
 ];
 ```
 
+## Usage
 To use the package you need to add a trait to your model
 ```
 use Illuminate\Database\Eloquent\Model;

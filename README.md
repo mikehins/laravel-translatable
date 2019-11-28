@@ -4,7 +4,6 @@
 [![StyleCI shield](https://github.styleci.io/repos/223970038/shield)](https://github.styleci.io/repos/223970038)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mikehins/laravel-translatable.svg?style=flat-square)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable)
 [![GitHub license](https://img.shields.io/github/license/mikehins/laravel-translatable.svg)](https://github.com/mikehins/laravel-translatable/blob/master/LICENSE)
-[![Coverage Status](https://coveralls.io/repos/mikehins/laravel-translatable/badge.svg?branch=master&service=github)](https://coveralls.io/github/mikehins/laravel-translatable?branch=master)
 [![codecov.io](https://codecov.io/github/mikehins/laravel-translatable/coverage.svg?branch=master)](https://codecov.io/github/mikehins/laravel-translatable?branch=master)
 
 # laravel-translatable

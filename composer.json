@@ -28,13 +28,8 @@
             ]
         }
     },
-    "scripts": {
-        "migrate": [
-            "php artisan migrate --package=\"mikehins/laravel-translatable\" --env=$LARAVEL_ENV"
-        ]
-    },
     "require-dev": {
         "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": "8.5.x-dev"
+        "phpunit/phpunit": "^8.5"
     }
 }

@@ -9,15 +9,12 @@ env:
     - COMPOSER_FLAGS="--prefer-lowest"
     - COMPOSER_FLAGS=""
 
-before_install:
-  - composer require satooshi/php-coveralls:dev-master
-  - composer install --dev
-
-after_script:
-      - php vendor/bin/coveralls -v
-
 before_script:
   - travis_retry composer update ${COMPOSER_FLAGS}
 
 script:
-  - vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+  # Submit coverage report to https://codecov.io
+  - bash <(curl -s https://codecov.io/bash)

@@ -26,7 +26,7 @@ class TranslatableServiceProvider extends ServiceProvider
         ], 'config');
         
         Collection::macro('for', function ($field, $code) {
-            return $this->where('key', $field)->where('locale', $code)->pluck('value')->first() ?? $field;
+            return $this->where('key', $field)->where('locale', $code)->pluck('value')->first() ?? null;
         });
     }
     

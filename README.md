@@ -1,13 +1,12 @@
-[![Latest Stable Version](https://poser.pugx.org/mikehins/laravel-translatable/v/stable?format=flat-square)](https://packagist.org/packages/mikehins/laravel-translatable)
 [![Build Status](https://travis-ci.org/mikehins/laravel-translatable.svg?branch=master)](https://travis-ci.org/mikehins/laravel-translatable)
-[![Total Downloads](https://poser.pugx.org/mikehins/laravel-translatable/downloads)](https://packagist.org/packages/mikehins/laravel-translatable)
 [![StyleCI shield](https://github.styleci.io/repos/223970038/shield)](https://github.styleci.io/repos/223970038)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mikehins/laravel-translatable.svg?style=flat-square)](https://scrutinizer-ci.com/g/mikehins/laravel-translatable)
-[![GitHub license](https://img.shields.io/github/license/mikehins/laravel-translatable.svg)](https://github.com/mikehins/laravel-translatable/blob/master/LICENSE)
+[![Latest Stable Version](https://poser.pugx.org/mikehins/laravel-translatable/v/stable?format=flat-square)](https://packagist.org/packages/mikehins/laravel-translatable)
 [![codecov.io](https://codecov.io/github/mikehins/laravel-translatable/coverage.svg?branch=master)](https://codecov.io/github/mikehins/laravel-translatable?branch=master)
+[![Total Downloads](https://poser.pugx.org/mikehins/laravel-translatable/downloads)](https://packagist.org/packages/mikehins/laravel-translatable)
 
 # laravel-translatable
-DO NOT USE RIGHT NOW... MORE INSTRUCTIONS TO COME...
+DO NOT USE YET... MORE INSTRUCTIONS TO COME...
 
 Laravel translatable uses the model events to create update or delete translations associated with a model.
 
@@ -143,3 +142,16 @@ public function messages()
     return $messages;
 }
 ```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Credits
+
+- [Mike Hins](https://github.com/mikehins)
+- [All contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

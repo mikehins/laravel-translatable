@@ -77,5 +77,5 @@ class Translation extends Model
     }
     
     // https://arianacosta.com/php/laravel/tutorial-full-text-search-laravel-5/
-	// full text search
+    // full text search
 }

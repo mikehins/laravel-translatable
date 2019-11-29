@@ -20,8 +20,8 @@ class CreateTranslationsTable extends Migration
             $table->string('translatable_type');
             $table->string('locale');
         });
-	
-	    DB::statement('ALTER TABLE `translations` ADD FULLTEXT fulltext_index (`key`)');
+    
+        DB::statement('ALTER TABLE `translations` ADD FULLTEXT fulltext_index (`key`)');
     }
     
     /**

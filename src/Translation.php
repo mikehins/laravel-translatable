@@ -75,4 +75,6 @@ class Translation extends Model
     {
         return $this->attributes['translatable'] = request('translatable');
     }
+    
+    // https://arianacosta.com/php/laravel/tutorial-full-text-search-laravel-5/
 }

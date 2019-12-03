@@ -201,7 +201,7 @@ class TranslatableTest extends TestCase
     public function it_should_automatically_retrieve_a_translation()
     {
         (new TestTable($this->data))->save();
-		
+        
         $item = (new TestTable)->locale('fr')->find(1);
         $this->assertEquals($this->fr_sentence, $item->name);
 
@@ -246,28 +246,28 @@ class TranslatableTest extends TestCase
     {
         $this->assertInstanceOf(MorphTo::class, (new Translation)->translatable());
     }
-	
-	/** @test */
-	public function it_should_bump_my_test_coverage_up2()
-	{
-		$this->assertInstanceOf(Builder::class, (new Translation)->orderTranslationByKey());
-	}
-	
-	/** @test */
-	public function it_should_return_the_model_translation_depending_on_the_session_language()
-	{
-		app()->setLocale('fr');
-		(new TestTable($this->data))->save();
-		$item = (new TestTable)->find(1);
-		$this->assertEquals($this->fr_sentence, $item->name);
-		
-		TestTable::truncate();
-		
-		app()->setLocale('en');
-		(new TestTable($this->data))->save();
-		$item = (new TestTable)->find(1);
-		$this->assertEquals($this->en_sentence, $item->name);
-	}
+    
+    /** @test */
+    public function it_should_bump_my_test_coverage_up2()
+    {
+        $this->assertInstanceOf(Builder::class, (new Translation)->orderTranslationByKey());
+    }
+    
+    /** @test */
+    public function it_should_return_the_model_translation_depending_on_the_session_language()
+    {
+        app()->setLocale('fr');
+        (new TestTable($this->data))->save();
+        $item = (new TestTable)->find(1);
+        $this->assertEquals($this->fr_sentence, $item->name);
+        
+        TestTable::truncate();
+        
+        app()->setLocale('en');
+        (new TestTable($this->data))->save();
+        $item = (new TestTable)->find(1);
+        $this->assertEquals($this->en_sentence, $item->name);
+    }
     
     
 

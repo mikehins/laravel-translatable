@@ -23,7 +23,8 @@ class CreateTranslationsTable extends Migration
 		
 		// sqlite does not like this...
 		if (app()->environment() !== 'testing') {
-			\DB::statement('ALTER TABLE `translations` ADD FULLTEXT fulltext_index (`key`)');
+			\DB::statement('ALTER TABLE `translations` ADD FULLTEXT fulltext_index (`value`)');
+			\DB::statement('ALTER TABLE `translations` ADD INDEX `type_local_key_id`(`key`, `translatable_id`, `translatable_type`, `locale`);');
 		}
 	}
 	

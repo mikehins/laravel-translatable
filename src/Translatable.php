@@ -4,6 +4,7 @@ namespace Mikehins\Translatable;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 trait Translatable
 {
@@ -128,14 +129,15 @@ trait Translatable
 		})->implode(' ');
 	}
 	
-	public function scopeSearchFullText($query, $term)
+	public function scopeSearchFullText($query, $term, $fields = [])
 	{
-		return $query->join('translations', 'translations.translatable_id', '=', 'products.id')
+		$alias = Str::random(8);
+		return $query->join(\DB::raw('translations as ' . $alias . ' ON ' . $alias . '.translatable_id = ' . $this->getTable() . '.' . $this->primaryKey))
 			->addSelect([
-				'relevance' => function ($query) use ($term) {
-					$query->selectRaw("MATCH (`translations`.`value`) AGAINST ('" . $this->fullTextWildcards($term) . "' IN BOOLEAN MODE)")
+				'relevance' => function ($query) use ($term, $alias) {
+					$query->selectRaw("MATCH (`' . $alias . '`.`value`) AGAINST ('" . $this->fullTextWildcards($term) . "' IN BOOLEAN MODE)")
 						->from('translations')
-						->where('translations.translatable_id', DB::raw($this->getTable() . '.' . $this->primaryKey))
+						->where($alias . '.translatable_id', DB::raw($this->getTable() . '.' . $this->primaryKey))
 						->limit(1);
 				}
 			])

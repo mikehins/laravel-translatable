@@ -1,5 +1,5 @@
 name: laravel-translatable
-description: 'Package translation for laravel'
+desc: 'Package translation for laravel'
 price: 20
 price_extended: 2000
 license: CC-Zero

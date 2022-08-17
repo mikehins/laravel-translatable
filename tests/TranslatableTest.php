@@ -268,17 +268,16 @@ class TranslatableTest extends TestCase
         $item = (new TestTable)->find(1);
         $this->assertEquals($this->en_sentence, $item->name);
     }
-    
-    
-
-    //	/** @test */
-//	public function it_shoud_be_able_to_suggest()
-//	{
-//		(new TestTable(['translatable' => ['fr' => [$this->key => 'ABCD',], 'en' => [$this->key => 'ABCD',]],]))->save();
-//		(new TestTable(['translatable' => ['fr' => [$this->key => 'BCDE',], 'en' => [$this->key => 'BCDE',]],]))->save();
-//		(new TestTable(['translatable' => ['fr' => [$this->key => 'CDEF',], 'en' => [$this->key => 'CDEF',]],]))->save();
-//		(new TestTable(['translatable' => ['fr' => [$this->key => 'DEFG',], 'en' => [$this->key => 'DEFG',]],]))->save();
-//
-//		dd((new Translation)->suggest(TestTable::class, $this->key, 'CD')->orderBy($this->key)->get()->toArray());
-//	}
+	
+	
+	/** @test */
+	public function it_shoud_be_searching_translations()
+	{
+		(new TestTable(['translatable' => ['fr' => [$this->key => 'ABCD',], 'en' => [$this->key => 'ABCD',]],]))->save();
+		(new TestTable(['translatable' => ['fr' => [$this->key => 'BCDE',], 'en' => [$this->key => 'BCDE',]],]))->save();
+		(new TestTable(['translatable' => ['fr' => [$this->key => 'CDEF',], 'en' => [$this->key => 'CDEF',]],]))->save();
+		(new TestTable(['translatable' => ['fr' => [$this->key => 'DEFG',], 'en' => [$this->key => 'DEFG',]],]))->save();
+		
+		dd((new TestTable)->searchFullText('cde')->toSql());
+	}
 }

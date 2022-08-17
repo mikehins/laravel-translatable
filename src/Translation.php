@@ -60,7 +60,9 @@ class Translation extends Model
         return $query->select(\DB::raw('
 			IF(translations.`key` = "' . $key . '", translations.value, "") as ' . $key . '
 		'))->where(
-            'translations.locale', '=', app()->getLocale()
+            'translations.locale',
+            '=',
+            app()->getLocale()
         )->orderBy(
             \DB::raw($key . ' ' . $order)
         )->groupBy('translations.translatable_id');

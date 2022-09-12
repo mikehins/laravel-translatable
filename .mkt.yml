@@ -3,3 +3,5 @@ desc: 'Package translation for laravel'
 price: 20
 price_extended: 2000
 license: CC-Zero
+images:
+    - 'https://image.winudf.com/v2/image1/Y29tLnRyYWR1Y3RvcndlYl9pY29uXzE1ODY2ODY0MjNfMDI5/icon.png?fakeurl=1&h=240&type=webp'
